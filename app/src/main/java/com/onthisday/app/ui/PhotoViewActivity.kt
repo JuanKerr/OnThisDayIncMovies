@@ -167,8 +167,9 @@ class PhotoViewActivity : AppCompatActivity() {
                         .into(thumb)
 
                     // Tap anywhere on the frame to launch system video player
-                    frame.setOnClickListener { launchVideoPlayer(uri) }
-                    play.setOnClickListener  { launchVideoPlayer(uri) }
+                    val name = names[position]
+                    frame.setOnClickListener { launchVideoPlayer(uri, name) }
+                    play.setOnClickListener  { launchVideoPlayer(uri, name) }
                 } else {
                     Glide.with(holder.itemView.context)
                         .load(uri)
@@ -193,17 +194,33 @@ class PhotoViewActivity : AppCompatActivity() {
         updateToolbar()
     }
 
-    private fun launchVideoPlayer(uri: Uri) {
-        // Fire ACTION_VIEW directly (no chooser wrapper) so Android shows its standard
-        // resolver with "Just once" / "Always", allowing the user's choice to persist.
+    private fun launchVideoPlayer(uri: Uri, displayName: String) {
+        // Use a specific MIME type derived from the file extension so that third-party
+        // players (VLC, MX Player, etc.) that register for e.g. "video/mp4" rather than
+        // the generic "video/*" can offer "Just once" / "Always" in the resolver.
+        val mime = mimeTypeForVideo(displayName)
         val intent = Intent(Intent.ACTION_VIEW).apply {
-            setDataAndType(uri, "video/*")
+            setDataAndType(uri, mime)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         }
         try {
             startActivity(intent)
         } catch (e: Exception) {
             Toast.makeText(this, R.string.no_video_player, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun mimeTypeForVideo(name: String): String {
+        return when (name.substringAfterLast('.', "").lowercase()) {
+            "mp4", "m4v" -> "video/mp4"
+            "mkv"        -> "video/x-matroska"
+            "avi"        -> "video/avi"
+            "mov"        -> "video/quicktime"
+            "wmv"        -> "video/x-ms-wmv"
+            "3gp"        -> "video/3gpp"
+            "webm"       -> "video/webm"
+            "ts"         -> "video/mp2ts"
+            else         -> "video/*"
         }
     }
 
