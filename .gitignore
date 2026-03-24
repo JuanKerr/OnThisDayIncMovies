@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# APK outputs (CI will generate these)
+app/build/outputs/
+
+# Keystore files (never commit these)
+*.jks
+*.keystore

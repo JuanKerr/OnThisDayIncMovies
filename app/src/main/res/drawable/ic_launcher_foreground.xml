@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Cat body -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M34,72 C34,58 40,50 54,48 C68,50 74,58 74,72 C74,80 70,86 54,86 C38,86 34,80 34,72 Z"/>
+
+    <!-- Cat head -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M38,52 C38,40 44,32 54,32 C64,32 70,40 70,52 C70,62 64,68 54,68 C44,68 38,62 38,52 Z"/>
+
+    <!-- Left ear -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M38,48 L34,30 L48,40 Z"/>
+
+    <!-- Right ear -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M70,48 L74,30 L60,40 Z"/>
+
+    <!-- Left ear inner -->
+    <path
+        android:fillColor="#FF9999"
+        android:pathData="M39,46 L36,33 L47,41 Z"/>
+
+    <!-- Right ear inner -->
+    <path
+        android:fillColor="#FF9999"
+        android:pathData="M69,46 L72,33 L61,41 Z"/>
+
+    <!-- Left eye (white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,50 C46,47 48,45 50,45 C52,45 54,47 54,50 C54,53 52,55 50,55 C48,55 46,53 46,50 Z"/>
+
+    <!-- Left pupil -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M48,50 C48,48.3 48.9,47 50,47 C51.1,47 52,48.3 52,50 C52,51.7 51.1,53 50,53 C48.9,53 48,51.7 48,50 Z"/>
+
+    <!-- Right eye (white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,50 C54,47 56,45 58,45 C60,45 62,47 62,50 C62,53 60,55 58,55 C56,55 54,53 54,50 Z"/>
+
+    <!-- Right pupil -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M56,50 C56,48.3 56.9,47 58,47 C59.1,47 60,48.3 60,50 C60,51.7 59.1,53 58,53 C56.9,53 56,51.7 56,50 Z"/>
+
+    <!-- Nose -->
+    <path
+        android:fillColor="#FF9999"
+        android:pathData="M52,57 L54,59 L56,57 L54,55 Z"/>
+
+    <!-- Mouth -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#CCCCCC"
+        android:strokeWidth="1.2"
+        android:pathData="M54,59 C52,61 50,61 50,62 M54,59 C56,61 58,61 58,62"/>
+
+    <!-- Whiskers left -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#CCCCCC"
+        android:strokeWidth="0.8"
+        android:pathData="M50,57 L36,54 M50,58 L36,58 M50,59 L36,62"/>
+
+    <!-- Whiskers right -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#CCCCCC"
+        android:strokeWidth="0.8"
+        android:pathData="M58,57 L72,54 M58,58 L72,58 M58,59 L72,62"/>
+
+    <!-- Camera body (old-fashioned box camera) held by cat paws -->
+    <!-- Camera box -->
+    <path
+        android:fillColor="#8B6914"
+        android:pathData="M40,76 L68,76 L68,90 L40,90 Z"/>
+
+    <!-- Camera top ridge -->
+    <path
+        android:fillColor="#A07820"
+        android:pathData="M43,73 L65,73 L65,76 L43,76 Z"/>
+
+    <!-- Camera lens ring -->
+    <path
+        android:fillColor="#444444"
+        android:pathData="M54,78 C51.2,78 49,80.2 49,83 C49,85.8 51.2,88 54,88 C56.8,88 59,85.8 59,83 C59,80.2 56.8,78 54,78 Z"/>
+
+    <!-- Camera lens inner -->
+    <path
+        android:fillColor="#222266"
+        android:pathData="M54,79.5 C52.1,79.5 50.5,81.1 50.5,83 C50.5,84.9 52.1,86.5 54,86.5 C55.9,86.5 57.5,84.9 57.5,83 C57.5,81.1 55.9,79.5 54,79.5 Z"/>
+
+    <!-- Lens gleam -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,80.5 C51.5,80.5 51,81 51,81.5 C51,82 51.5,82 52,81.5 C52.5,81 52.5,80.5 52,80.5 Z"/>
+
+    <!-- Shutter button -->
+    <path
+        android:fillColor="#CCCCCC"
+        android:pathData="M63,73 C63,72 63.5,71.5 64,71.5 C64.5,71.5 65,72 65,73 Z"/>
+
+    <!-- Flash/viewfinder bump -->
+    <path
+        android:fillColor="#BBAA55"
+        android:pathData="M42,74 L46,74 L46,76 L42,76 Z"/>
+
+    <!-- Left paw holding camera -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M37,78 C35,77 34,79 35,81 C36,83 39,82 40,80 Z"/>
+
+    <!-- Right paw holding camera -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M71,78 C73,77 74,79 73,81 C72,83 69,82 68,80 Z"/>
+
+    <!-- Tail curling around -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#1A1A1A"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M68,84 C78,84 82,76 80,68 C78,62 74,60 74,56"/>
+
+</vector>
