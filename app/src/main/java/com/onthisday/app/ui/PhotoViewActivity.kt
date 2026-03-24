@@ -194,15 +194,14 @@ class PhotoViewActivity : AppCompatActivity() {
     }
 
     private fun launchVideoPlayer(uri: Uri) {
+        // Fire ACTION_VIEW directly (no chooser wrapper) so Android shows its standard
+        // resolver with "Just once" / "Always", allowing the user's choice to persist.
         val intent = Intent(Intent.ACTION_VIEW).apply {
             setDataAndType(uri, "video/*")
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
-        // Use a chooser — avoids resolveActivity() returning null on Android 11+
-        // due to package visibility restrictions, and lets the user pick their player
         try {
-            startActivity(Intent.createChooser(intent, null))
+            startActivity(intent)
         } catch (e: Exception) {
             Toast.makeText(this, R.string.no_video_player, Toast.LENGTH_SHORT).show()
         }
